@@ -1,2 +1,2 @@
-# GTBL_Dataset
-This repository provides the Ground Texture Based Localization (GTBL) Dataset.
+# HD Ground Database
+This repository provides the HD Ground Database.

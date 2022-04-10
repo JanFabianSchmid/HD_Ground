@@ -2,7 +2,7 @@
 This repository provides the HD Ground Database.
 
 ## License
-© 2021. This work is licensed under a CC BY-SA: 4.0 license.
+© 2022. This work is licensed under a CC BY-SA: 4.0 license.
 https://creativecommons.org/licenses/by-sa/4.0/
 
 ## Paper

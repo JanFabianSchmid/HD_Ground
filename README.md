@@ -28,7 +28,6 @@ In order to get access to the data, please send an E-Mail to HD.Ground.Database@
 - Name
 - Affiliation
 - Why would you like to get access to the data?
-- Which datasets do you need, i.e. data of which textures?
 
 ## Content of the HD Ground Database
 The database contains images of four main application areas and seven additional areas.

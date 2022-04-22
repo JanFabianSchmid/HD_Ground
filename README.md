@@ -15,10 +15,10 @@ Please cite us if you are using our database.
 @ARTICLE{HD_Ground_Schmid,
 author={J. F. Schmid and S. F. Simon and R. Radhakrishnan and S. Frintrop and R. Mester},
 journal={IEEE International Conference on Robotics and Automation (ICRA)},
-title={{HD Ground} - A Database for Ground Texture Based Localization}
+title={{HD Ground} - A Database for Ground Texture Based Localization},
 year={2022},
-pages={7628-7634},
 month={Mai},
+pages={7628-7634},
 }
 ```
 

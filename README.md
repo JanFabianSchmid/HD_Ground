@@ -101,7 +101,7 @@ is the 72th image (recorded with our downward facing camera c01) of sequence 1 r
 it is a reference image of our asphalt application area and it is part of the first version of our HD Ground Database.
 
 ### Camera Calibration
-We provide only the pre-processed images, that have already been rectified and compensated for vignetting.
-
-The following calibration was obtained from a dataset of 344 images for a pinhole camera model with focal lengths fx, fy, principal point ppx, ppy, and two radial distortion parameters k1, k2 (for more details on the model see e.g. opencv documentation https://docs.opencv.org/3.4.15/d9/d0c/group__calib3d.html, retrieved 13.10.2021):
+We calibrated with a pinhole camera model with focal lengths fx, fy, principal point ppx, ppy, and two radial distortion parameters k1, k2. This resulted in the following values:
 - [fx, fy, ppx, ppy, k1, k2] = [2195.70853, 2195.56073, 820.7289683, 606.242723, -0.1581150018, 0.1909030804]
+
+Based on this camera model, the provided images have been transformed to compensate for lens distortion, using [cv::undistort()](https://docs.opencv.org/4.5.5/d9/d0c/group__calib3d.html#ga69f2545a8b62a6b0fc2ee060dc30559d). Furthermore, we compensated for vignetting as described in the paper.

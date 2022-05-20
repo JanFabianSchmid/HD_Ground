@@ -1,5 +1,5 @@
 # HD Ground Database
-This repository provides the HD Ground Database.
+This repository provides the HD Ground Database. A large database of high-resolution ground images from a downward-facing camera. It can be used, for example, to train and evaluate methods for ground texture based localization. For many images, we provide their ground truth poses.
 
 ## License
 © 2022. This work is licensed under a CC BY-SA: 4.0 license.
@@ -55,6 +55,35 @@ The seven additional datasets are:
 In our paper, we use the datasets footpath_test_sq, parking_place_test_sq, office_test_sq, kitchen_test_sq, and doormat for training and parameter optimization. The datasets bathroom_tiles, checker_plate_steel, garage_concrete, ramp_rubber, terrace_pavement, workroom_linoleum are used to evaluate the generalization capabilities of localization methods, as they are not included during training and parameter optimization. The main datasets can provide regularly recorded test sequences to examine localization performance dependent on the time interval between mapping and localization, and they provide test sequences that can be used to evaluate localization performance in a teach-and-repeat scenario. 
 
 For more details about the database please refer to our ICRA paper mentioned above.
+
+### Ground truth poses
+Ground truth poses are given as Euclidean transform matrices in homogeneous coordinates that represent a mapping of the image into the map coordinate system.
+The poses are represented as a string of 9 values, e.g. "a b c d e f 0 0 1", which translates into the transform:
+
+$$ T = \begin{bmatrix}
+a & b & c \\
+d & e & f \\
+0 & 0 & 1
+\end{bmatrix}.$$
+
+With 
+
+$$ t = \begin{bmatrix}
+c \\
+f 
+\end{bmatrix},$$
+
+representing the map coordinates of the top left corner of the image.
+Simply multiply this matrix to a vector of image coordinates 
+
+$$ T * \begin{bmatrix}
+I_x \\
+I_y \\
+1
+\end{bmatrix},$$
+
+to obtain the corresponding map coordinates.
+You may use the transform also to warp the entire image into the map using 'warpAffine()' from OpenCV for example.
 
 ### Structure of the Database
 In the respective database folders, e.g. footpath_test_sq, you find folders containing the images, *.test files that list the local image paths for the sequence, and *.txt files that, in addition to the image paths, provide their 'ground truth' pose in the map coordinate system as standard euclidean transform in homogeneous coordinates (with the rows being concatenated after each other). Pose strings starting with "* " are incorrect or at least we were not able to confirm that they are correct (DO NOT USE THESE POSES AS GROUND TRUTH!). 

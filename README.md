@@ -1,5 +1,5 @@
 # HD Ground Database
-This repository provides the HD Ground Database. A large database of high-resolution ground images from a downward-facing camera. It can be used, for example, to train and evaluate methods for ground texture based localization. For many images, we provide their ground truth poses.
+This repository provides the HD Ground Database. A large database of high-resolution ground images from a downward-facing camera. It can be used, for example, to train and evaluate methods for ground texture based localization (global map-based localization without approximate pose being available, local map-based localization with an approximate pose being available, and relative localization). For many images, we provide their ground truth poses.
 
 ## License
 © 2022. This work is licensed under a CC BY-SA: 4.0 license.

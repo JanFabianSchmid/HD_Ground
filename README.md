@@ -6,7 +6,7 @@ This repository provides the HD Ground Database. A large database of high-resolu
 https://creativecommons.org/licenses/by-sa/4.0/
 
 ## Paper
-https://www.inf.uni-hamburg.de/en/inst/ab/cv/media/schmid-etal-icra-2022.pdf
+https://ieeexplore.ieee.org/document/9811977
 
 ## Citation
 Please cite us if you are using our database.
